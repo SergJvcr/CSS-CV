@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    background-color: #f1f1f1;
+    color: #0f141e;
+
+    /* font: normal 16px 'Roboto', sans-serif; - можно и в одну строчку; шрифты были установлены, но можно и базовые брать */
+    font-size: 16px;
+    font-weight: normal;
+    font-family: 'Roboto', sans-serif;
+}
+
+a { /* работа с сылками */
+    color: rgb(6, 6, 243);
+    text-decoration: none;
+}
+
+a:hover { /* при наведении мыши на ссылку */
+    text-decoration: underline;
+}
+
+a:active { /* при нажатии на ссылку, но ещё не отпустил кнопку */
+    color: rgb(86, 86, 207);
+}
+
+a:visited { /* когда уже прошли по ссылке */
+    color: rgb(126, 116, 125);
+}
+
+.avatar {  /* .avatar - класс, а если #avatar - это id */
+    width: 200px; /* размер */
+    border-radius: 10px; /* скруглить края */
+    box-shadow: 4px 4px 14px rgba(0, 0, 0, 25); /* тень */
+}
+
+.info p {
+    color: #86898f;
+    margin: 0;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: none;
+    /* text-transform: uppercase; - какие буквы: заглавные, строчные */
+    /* letter-spacing: 5px; - расстояние м/у букв в слове */
+    /* word-spacing: 43px; - расстояние между словами */
+}
+
+.info {
+  display: flex;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 700px) { /* адаптация к медиазапросу: так на маленьком экране фотография и текст справа переместятся в центр */
+  .info {
+    text-align: center;
+    display: block;
+  }
+}
+
+.info-text {
+  margin-left: 40px;
+}
+
+.info-text {
+  margin-bottom: 10px;
+}
+
+.container {
+    max-width: 75%; /* размер 75% от всего экрана */
+    margin: auto; /* расположение по центру */
+    padding-top: 30px; /* отступ сверху */
+}
+
+#bg-yellow {
+    background-color: #fdf7dd;
+}
+
+#bg-green {
+    background-color: #dfffe1;
+}
+
+#bg-red {
+    background-color: #f7d7d7;
+}
+
+.card {
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+.card h2 {
+    margin-bottom: 10px;
+}
+
+.list { /* работа с оформлением списков */
+    padding: 0px 20px;
+}
+
+.list li { /* работа с тегами внутри списка */
+    color: #86898f;
+    margin-bottom: 10px;
+}
+
+.table {
+    width: 100%;
+}
+
+.table td {
+    padding-bottom: 10px;
+
+}
+
+.table td:nth-child(2), td:nth-child(3) { /* псевдоселектор для точечной стилистики некоторых элементов */
+    color: grey;
+}
+
+/* .table tr:nth-child(odd) {
+    background-color: rgb(99, 228, 153);
+} 
+even - чётные строки, odd - нечётные строки */
+
+.contact h2 {
+    text-align: center;
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  color: #86898f;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background: transparent;
+  color: #000;
+  padding: 10px 0 10px;
+  outline: none;
+  font-family: inherit;
+}
+
+.row {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.row > .form-group {
+  width: 50%;
+}
+
+.row > .form-group:first-child {
+  margin-right: 20px;
+}
+
+.btn {
+  color: rgb(255, 255, 255);
+  background: #111;
+  padding: 15px 20px;
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.btn:hover { /* псевдоселектор */
+  opacity: 0.9; /* изменяет цвет кнопки при наведении на неё курсора, как интерактив для кнопки */
+}
+
+/* Box Model
+
+.social {
+    background: #6A9A1F;
+    padding: 15px; отступ внутри блока
+    border: 5px solid #434E3C;  размер отступа, тип отступа, цвет отступа
+    margin: 20px; отступ снаружи блока; отступы могут быть и разные: сверху одна длина, снизу другая, а по краям третяя
+} */
+
+/* 
+* {
+     нужные параметры отступов и тд
+} */
+
+/* есть ещё в css функция позиционирования элемента на экране; подходит для навигатора, быстрой ссылки на социальные сети и тд */
